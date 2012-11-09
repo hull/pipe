@@ -196,7 +196,7 @@ class Context
             return $path;
         }
 
-        return $this->environment->loadPaths->find($path);
+        return $this->environment->loadPaths->find($path,dirname($this->path));
     }
 
     protected function getExtension()
