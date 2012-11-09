@@ -101,7 +101,7 @@ class Environment implements \ArrayAccess
         if ($path->isAbsolute()) {
             $realPath = $logicalPath;
         } else {
-            $realPath = $this->loadPaths->find($logicalPath);
+            $realPath = $this->loadPaths->find($logicalPath,'.');
         }
 
         if (!is_file($realPath)) {
